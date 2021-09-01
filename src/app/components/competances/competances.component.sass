@@ -1,0 +1,151 @@
+#competences
+  color: #17242a
+  width: 100%
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  perspective: 1000px
+
+  & article
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 50%
+    min-width: 370px
+    border-radius: 10px
+    box-shadow: 0px 10px 10px #2575aa
+
+  & figure
+    width: 200px
+    font-size: 2rem
+    min-width: 100px
+    margin: 1.5rem
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: center
+
+  & .sousCompetences
+    z-index: 10
+    background-color: #b3dfdc
+    border-radius: 5px
+    position: absolute
+    top: -140px
+    left: -25px
+
+    height: 120px
+    display: none
+
+  & .sousCompetences::after
+    content: ""
+    position: absolute
+    top: 100%
+    left: 50%
+    margin-left: -30px
+    border-width: 30px
+    border-style: solid
+    border-color: #b3dfdc transparent transparent transparent
+
+@keyframes sousCompetencesAnim
+  0%
+    transform: scale(0.7)
+    opacity: 0%
+
+  100%
+    transform: scale(1)
+    opacity: 100%
+
+#competences article > figure > .iconContainer
+  font-size: 6rem
+  transition: transform 0.2s linear
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 8rem
+
+#competences .sousCompetences .icon
+  font-size: 3rem
+
+#competences .sousCompetences figcaption
+  font-size: 1.5rem
+
+#competences article > figure:hover .iconContainer
+  transform: scale(1.2)
+
+#competences article > figure:hover .sousCompetences
+  display: flex
+  animation: sousCompetencesAnim 0.5s
+  transform: scale(1)
+  opacity: 100%
+
+.sousCompetences div
+  width: 100%
+  display: flex
+  justify-content: center
+
+.card
+  display: flex
+  justify-content: center
+  width: 100%
+  height: 720px
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1)
+  transform-style: preserve-3d
+
+  &Flipped
+    transform: rotateY(-180deg)
+
+  &Face
+    cursor: pointer
+    position: absolute
+    width: 100%
+
+    backface-visibility: hidden
+    // overflow: hidden
+
+#backend
+  transform: rotateY(180deg)
+
+/* front */
+#html fa-icon
+  color: #e54c21
+
+#css fa-icon
+  color: #264de4
+
+#bootstrap fa-icon
+  color: #563e7c
+
+#js fa-icon
+  color: #efd81d
+
+#ts svg
+  color: #2f74c0
+  border-radius: 10px
+
+#jquery svg
+  color: #1066a9
+
+#angular fa-icon
+  color: #c3002f
+
+#ionic svg
+  color: #488aff
+
+#react fa-icon
+  color: #61dbfb
+
+/* back */
+#php fa-icon
+  color: #8993c1
+
+#sql svg
+  color: #00758f
+
+#nodejs fa-icon
+  color: #689f63
+
+#wordpress fa-icon
+  color: #207196

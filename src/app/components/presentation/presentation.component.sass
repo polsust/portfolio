@@ -1,0 +1,26 @@
+.show
+  position: relative
+  transform: scale(30%, 10%)
+  top: -90px
+  animation: show 1s ease-in-out forwards
+
+.figcaptionStart
+  transform: scale(30%, 10%)
+  top: -90px
+  *
+    color: transparent
+
+  @keyframes show
+    0%
+      transform: scale(30%, 10%)
+      top: -90px
+    50%
+      transform: scale(100%, 10%)
+      top: -90px
+    100%
+      transform: scale(100%, 100%)
+      top: 0px
+
+figcaption
+  *
+    transition: all 0.2s linear
