@@ -1,5 +1,4 @@
 #competences
-  color: #17242a
   width: 100%
   text-align: center
   display: flex
@@ -29,12 +28,10 @@
 
   & .sousCompetences
     z-index: 10
-    background-color: #b3dfdc
+    background-color: #a9cdf7
     border-radius: 5px
     position: absolute
     top: -140px
-    left: -25px
-
     height: 120px
     display: none
 
@@ -46,7 +43,7 @@
     margin-left: -30px
     border-width: 30px
     border-style: solid
-    border-color: #b3dfdc transparent transparent transparent
+    border-color: #a9cdf7 transparent transparent transparent
 
 @keyframes sousCompetencesAnim
   0%
@@ -66,13 +63,13 @@
   width: 100%
   height: 8rem
 
-#competences .sousCompetences .icon
+.sousCompetences .icon
   font-size: 3rem
 
-#competences .sousCompetences figcaption
+.sousCompetences figcaption
   font-size: 1.5rem
 
-#competences article > figure:hover .iconContainer
+article > figure:hover .iconContainer
   transform: scale(1.2)
 
 #competences article > figure:hover .sousCompetences
@@ -118,12 +115,15 @@
 #bootstrap fa-icon
   color: #563e7c
 
+#tailwind svg
+  color: #06b6d4
+
 #js fa-icon
   color: #efd81d
 
 #ts svg
   color: #2f74c0
-  border-radius: 10px
+  border-radius: 5px
 
 #jquery svg
   color: #1066a9

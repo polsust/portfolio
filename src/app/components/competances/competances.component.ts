@@ -22,7 +22,7 @@ import {
   templateUrl: './competances.component.html',
   styleUrls: ['./competances.component.sass'],
 })
-export class CompetancesComponent implements OnInit {
+export class CompetancesComponent {
   @ViewChild('frontEnd', { read: ElementRef, static: false }) frontEnd:
     | ElementRef
     | undefined;
@@ -43,19 +43,28 @@ export class CompetancesComponent implements OnInit {
   backHidden = true;
   frontHidden = false;
   private transitionHasEnded: boolean = true;
+  private isHovering = false;
 
   constructor(private renderer: Renderer2) {}
 
-  ngOnInit(): void {
-    this.updateHeight();
-  }
   ngAfterViewInit() {
     this.updateHeight();
+
+    setInterval(() => {
+      this.autoFlip();
+    }, 20000);
   }
 
   @HostListener('window:resize')
   onResize() {
     this.updateHeight();
+  }
+
+  mouseEnter() {
+    this.isHovering = true;
+  }
+  mouseLeave() {
+    this.isHovering = false;
   }
 
   cardFlip(side: string) {
@@ -94,5 +103,11 @@ export class CompetancesComponent implements OnInit {
       'height',
       frontHeight + 'px'
     );
+  }
+  autoFlip() {
+    if (this.isHovering) return;
+
+    let side = this.frontHidden ? 'back' : 'front';
+    this.cardFlip(side);
   }
 }

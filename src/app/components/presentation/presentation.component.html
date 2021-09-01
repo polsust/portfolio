@@ -1,22 +1,28 @@
 <figure>
-  <div class="flex justify-center relative top-5 z-10">
-    <img class="border-20 border-primary-lighter rounded-2xl animate-bounce-light" src="assets/img/pp.png" alt="">
+  <div class="relative z-10 flex justify-center top-5">
+    <img class="border-20 border-primary-lighter rounded-2xl animate-bounce" src="assets/img/pp.png" alt="">
   </div>
-  <figcaption #figcaption class="p-5 bg-primary-light rounded-2xl text-secondary-normal font-semibold leading-8 text-lg"
+  <figcaption #figcaption class="p-5 text-lg font-semibold leading-8 bg-primary-light rounded-2xl text-secondary-normal"
     [ngClass]="{'show': isInView() && !alredyAnimated,'figcaptionStart': !alredyAnimated}">
     <h3>Bonjour !</h3>
 
     <p>
-      Je m'appelle Pol, j'ai <span id=" age">19</span> ans.
+      Je m'appelle Pol, j'ai <span id="age">19</span> ans.
     </p>
-    <p>Je parle trois langues:
+    <p>
+      Je parle trois langues:
     </p>
 
     <div class="ml-5">
-      <p>L'<b class="text-white">ESPAGNOLE</b> ma langue native,</p>
-      <p>le <b class="text-white">FRANÇAIS</b> que j'apprends depuis que j'habite en France</p>
-      <p>et l'<b class="text-white">ANGLAIS</b> que j'appris grâce à internet.</p>
+      <p>L'<b class="text-gray-800">ESPAGNOLE</b> ma langue native,</p>
+      <p>le <b class="text-gray-800">FRANÇAIS</b> que j'apprends depuis que j'habite en France</p>
+      <p>et l'<b class="text-gray-800">ANGLAIS</b> que j'appris grâce à internet.</p>
     </div>
-
+    <p>
+      Je suis actuellement à la recherche d'un stage de fin d'études.
+    </p>
+    <p>
+      J'aimerais que ce stage me permet de monter en compétences dans ma carrière de dév.
+    </p>
   </figcaption>
 </figure>
