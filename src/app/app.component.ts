@@ -1,3 +1,5 @@
+import { PROJECTS } from './data/projects';
+import { Project } from './interfaces/project.interface';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +8,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
-  title = 'porfolio-PolSust';
+  title = 'portfolio-PolSust';
+
+  projects: Project[] = PROJECTS;
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event: Event) {}

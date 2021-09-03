@@ -31,6 +31,13 @@ module.exports = {
       animation: {
         "bounce-light": "lightBounce 3s infinite",
       },
+      boxShadow: {
+        innerXl: `
+           var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            --tw-shadow: inset 0px 8px 5px rgba(0, 0, 0, 0.06);
+            background-color: rgba(0, 0, 0, 0.06)
+        `,
+      },
       borderWidth: {
         DEFAULT: "1px",
         0: "0",

@@ -1,0 +1,50 @@
+<figure
+  class="flex flex-wrap w-full mb-20 overflow-hidden duration-500 transform shadow-xl hover:-translate-y-1 hover:shadow-2xl lg:w-2/3 bg-primary-light rounded-xl text-secondary-normal"
+  [ngClass]="{'flex-row-reverse': reverse}" *ngIf="project">
+  <nav [ngClass]="{'lg:flex-row-reverse': !reverse,'lg:flex-row': reverse}"
+    class="relative flex flex-col items-center w-full p-4 space-y-5 bg-primary-lighter rounded-t-xl lg:space-y-0">
+    <h4 [ngClass]="{'lg:text-right': !reverse,'lg:text-left': reverse}"
+      class="w-full text-2xl font-bold text-center lg:w-2/6">
+      {{project.name}}
+    </h4>
+    <span class="flex justify-center w-3/4 lg:w-3/6">
+      <div class="relative w-full h-5 rounded shadow-innerXl">
+        <div #front
+          [@expand]="{value: expand? 'expanded':'', params: {widthVal: project.frontEndPercentage, time: project.frontEndPercentage / 60}}"
+          class="absolute h-5 overflow-hidden duration-100 ease-in-out bg-blue-500 rounded-l frontend">
+          <p class="absolute z-10 font-bold textOver left-2 text-primary-lighter">{{project.frontEndPercentage}}%
+            Front
+          </p>
+        </div>
+        <div #back
+          [@expand]="{value: expand? 'expanded':'', params: {widthVal: project.backEndPercentage, time: project.backEndPercentage / 60}}"
+          class="absolute right-0 h-5 overflow-hidden bg-indigo-600 rounded-r">
+          <p class="absolute z-10 font-bold textOver right-2 text-primary-lighter">
+            {{project.backEndPercentage}}% Back
+          </p>
+        </div>
+      </div>
+    </span>
+    <span [ngClass]="{'flex-row-reverse': !reverse}"
+      class="flex items-center justify-center w-full h-16 text-4xl lg:w-1/6">
+      <a class="mx-5 hover:opacity-60" target="blank" [href]="project.demoLink">
+        <fa-icon title="Demo" [icon]="icons.faLink">
+        </fa-icon>
+      </a>
+      <a class="mx-5 hover:opacity-60" target="blank" [href]="project.githubRepo">
+        <fa-icon title="GitHub" [icon]="icons.faGithub">
+        </fa-icon>
+      </a>
+    </span>
+
+  </nav>
+
+  <div [ngClass]="{'lg:justify-start': !reverse, 'lg:justify-end': reverse}"
+    class="flex justify-center w-full lg:w-4/6"><img [src]="'assets/img/' + project.gif" alt=""></div>
+  <div class="w-2/6">
+    <div *ngFor="let project. of list" [ngSwitch]="">
+
+    </div>
+    <figcaption class="p-4">{{project.description}}</figcaption>
+  </div>
+</figure>

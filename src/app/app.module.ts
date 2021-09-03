@@ -6,17 +6,19 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CompetancesComponent } from './components/competances/competances.component';
-
+import { CompetencesComponent } from './components/competences/competences.component';
+import { ProjectComponent } from './components/project/project.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PresentationComponent,
     FooterComponent,
-    CompetancesComponent,
+    CompetencesComponent,
+    ProjectComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule],
+  imports: [BrowserModule, FontAwesomeModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

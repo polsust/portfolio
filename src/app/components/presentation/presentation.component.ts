@@ -7,7 +7,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class PresentationComponent implements OnInit {
   @ViewChild('figcaption') private figcaption: ElementRef | undefined;
-  public alredyAnimated = false;
+  public alreadyAnimated = false;
 
   isInView(): boolean {
     if (this.figcaption) {
@@ -16,7 +16,7 @@ export class PresentationComponent implements OnInit {
       const bottomShown = rect.bottom <= window.innerHeight;
       if (topShown && bottomShown) {
         setTimeout(() => {
-          this.alredyAnimated = true;
+          this.alreadyAnimated = true;
         }, 1000);
         return true;
       }
