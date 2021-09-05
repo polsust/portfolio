@@ -4,11 +4,20 @@ import {
   ElementRef,
   HostListener,
   Input,
-  OnInit,
-  Renderer2,
   ViewChild,
 } from '@angular/core';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGithub,
+  faHtml5,
+  faCss3,
+  faBootstrap,
+  faJsSquare,
+  faAngular,
+  faPhp,
+  faNodeJs,
+  faWordpress,
+  faSass,
+} from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import {
   animate,
@@ -28,7 +37,6 @@ import {
         'expanded',
         style({
           width: '{{widthVal}}%',
-          transition: 'width 1s',
         }),
         { params: { widthVal: 0 } }
       ),
@@ -36,42 +44,98 @@ import {
         params: { time: 1 },
       }),
     ]),
+    trigger('spin', [
+      state(
+        'spinning',
+        style({
+          transform: 'rotate(1800deg)',
+        })
+      ),
+      transition('* => spinning', [animate('1.5s ease-in-out')]),
+    ]),
+    trigger('grow', [
+      state(
+        'small',
+        style({
+          transform: 'scale(0.0001)',
+        })
+      ),
+      state(
+        'big',
+        style({
+          transform: 'scale(1)',
+        })
+      ),
+      transition('small => big', [
+        animate('0.5s cubic-bezier(.52,.57,.27,1.55)'),
+      ]),
+    ]),
+    trigger('fadeUp', [
+      state(
+        'down-invisible',
+        style({
+          transform: 'translateY(10px)',
+          opacity: 0,
+        })
+      ),
+      state(
+        'up-visible',
+        style({
+          transform: 'translateY(0px)',
+          opacity: 1,
+        })
+      ),
+      transition('down-invisible => up-visible', [animate('1.5s ease')]),
+    ]),
   ],
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
   @Input() project: Project | undefined;
   @Input() reverse: boolean | undefined;
 
-  @ViewChild('front', { read: ElementRef, static: false }) front:
-    | ElementRef
-    | undefined;
-  @ViewChild('back', { read: ElementRef, static: false }) back:
+  @ViewChild('figure', { read: ElementRef, static: false }) figure:
     | ElementRef
     | undefined;
 
-  expand: boolean = false;
+  animate: boolean = false;
+  techIndex: number = 0;
 
   icons = {
     faGithub,
     faLink,
+    faHtml5,
+    faCss3,
+    faBootstrap,
+    faJsSquare,
+    faAngular,
+    faPhp,
+    faNodeJs,
+    faWordpress,
+    faSass,
   };
 
   constructor() {}
 
-  ngOnInit(): void {}
+  animationEnd(evt: any) {
+    if (evt.toState === 'small') return;
+    this.techIndex++;
+  }
+
   @HostListener('window:scroll', ['$event'])
   private scroll() {
     if (this.isInView()) {
-      this.expand = true;
+      this.animate = true;
     }
   }
 
   isInView(): boolean {
-    if (this.front) {
-      const rect = this.front.nativeElement.getBoundingClientRect();
-      const topShown = rect.top >= 0;
+    if (this.figure) {
+      const rect = this.figure.nativeElement.getBoundingClientRect();
+
+      const topShown = rect.top <= window.innerHeight;
       const bottomShown = rect.bottom <= window.innerHeight;
-      if (topShown && bottomShown) return true;
+
+      if (topShown || bottomShown) return true;
       return false;
     }
     return false;

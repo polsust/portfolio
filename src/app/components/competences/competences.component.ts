@@ -1,4 +1,11 @@
 import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import {
   Component,
   ElementRef,
   HostListener,
@@ -22,12 +29,30 @@ import {
   selector: 'app-competences',
   templateUrl: './competences.component.html',
   styleUrls: ['./competences.component.sass'],
+  animations: [
+    trigger('spin', [
+      state(
+        'spinning',
+        style({
+          transform: 'rotate(-720deg)',
+        }),
+        { params: { widthVal: 0 } }
+      ),
+      transition('* => spinning', [
+        animate('1s cubic-bezier(.68,-0.55,.27,1.55)'),
+      ]),
+    ]),
+  ],
 })
 export class CompetencesComponent {
   @ViewChild('frontEnd', { read: ElementRef, static: false }) frontEnd:
     | ElementRef
     | undefined;
   @ViewChild('card', { read: ElementRef, static: false }) card:
+    | ElementRef
+    | undefined;
+
+  @ViewChild('flipper', { read: ElementRef, static: false }) flipper:
     | ElementRef
     | undefined;
 
@@ -44,7 +69,7 @@ export class CompetencesComponent {
   canFlip = false;
   backHidden = true;
   frontHidden = false;
-  private transitionHasEnded: boolean = true;
+  transitionHasEnded: boolean = true;
   private isHovering = false;
   private autoFlipTimeout = 50000;
 

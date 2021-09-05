@@ -2,6 +2,13 @@
 @import "tailwindcss/components"
 @import "tailwindcss/utilities"
 
+*,*::before,*::after
+  box-sizing: border-box
+
+img
+  max-width: 100%
+  height: auto
+
 ::-webkit-scrollbar
   width: 15px
 
@@ -14,59 +21,70 @@
 ::-webkit-scrollbar-thumb:hover
   background: #17242a
 
+body
+  background: linear-gradient(143deg, #90b4e1, #1c64b7, #0b468a)
+  background-size: 600% 600%
+
+  animation: gradient 31s ease infinite
+
+@keyframes gradient
+  0%
+    background-position: 0% 51%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 51%
+
 #separator
   background-color: #84B1E3
 
-img
-  max-width: 100%
-  height: auto
-
 /* front */
-#html fa-icon
+.html
   color: #e54c21
 
-#css fa-icon
+.css
   color: #264de4
 
-#bootstrap fa-icon
+.bootstrap
   color: #563e7c
 
-#tailwind svg
+.tailwind
   color: #06b6d4
 
-#sass fa-icon
+.sass
   color: #ce679a
 
-#js fa-icon
+.js
   color: #efd81d
 
-#ts svg
+.ts
   color: #2f74c0
   border-radius: 5px
 
-#jquery svg
+.jquery
   color: #1066a9
 
-#angular fa-icon
+.angular
   color: #c3002f
 
-#ionic svg
+.ionic
   color: #488aff
 
-#react fa-icon
+.react
   color: #61dbfb
 
 /* back */
-#php fa-icon
+.php
   color: #8993c1
 
-#sql svg
+.sql
   color: #00758f
 
-#nodejs fa-icon
+.nodejs
   color: #689f63
 
-#wordpress fa-icon
+.wordpress
   color: #207196
-#firebase svg
+
+.firebase
   color: #ffcb2d

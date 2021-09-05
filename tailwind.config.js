@@ -50,6 +50,9 @@ module.exports = {
         10: "10px",
         20: "20px",
       },
+      scale: {
+        1: "0.1",
+      },
     },
     variants: {},
     plugins: [],
