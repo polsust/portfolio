@@ -121,11 +121,18 @@
         </span>
       </figure>
 
+      <figure id="react">
+        <div class="iconContainer">
+          <fa-icon class="react" [icon]="faReact"></fa-icon>
+        </div>
+        <figcaption>React & React Native</figcaption>
+      </figure>
+
       <figure id="angular">
         <div class="iconContainer">
           <fa-icon class="angular" [icon]="faAngular"></fa-icon>
         </div>
-        <figcaption>Angular</figcaption>
+        <figcaption>Angular 2</figcaption>
       </figure>
       <figure id="ionic">
         <div class="iconContainer ionic">
@@ -142,7 +149,9 @@
         </div>
         <figcaption>Ionic</figcaption>
       </figure>
+
     </article>
+
     <article id="backend" class="relative shadow-lg cardFace rounded-xl bg-primary-light"
       [ngClass]="{'invisible': backHidden}">
       <span #flipper [@spin]="{value: transitionHasEnded? '':'spinning'}" title="flip" (click)="cardFlip('back')"

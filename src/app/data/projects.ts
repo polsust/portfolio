@@ -2,19 +2,23 @@ import { Project } from './../interfaces/project.interface';
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Wordpress Theme Enfant',
-    gif: 'teamCherryWP.gif',
+    name: 'Traqueur de la Station Spatiale Internationale',
+    gif: 'IssTracker.gif',
     verticalGif: false,
-    githubRepo: 'https://github.com/PolSust/talon-child',
-    demoLink: 'https://cefii-developpements.fr/pol1149/wpIntegrationProject/',
-    relevantTechnologies: ['php', 'wordpress', 'css', 'woocommerce', 'jquery'],
-    frontEndPercentage: 25,
-    backEndPercentage: 75,
-    description: [`Il s'agit d'un theme enfant de WordPress personnalisable.`],
+    githubRepo: 'https://github.com/PolSust/Iss3dTracker',
+    demoLink: 'https://whereistheiss-c59b4.web.app',
+    relevantTechnologies: ['react', 'threejs'],
+    frontEndPercentage: 100,
+    backEndPercentage: 0,
+    description: [
+      `Cette application permet de visualiser où se trouve la Station Spatiale Internationale.`,
+      `Grâce a une API on peut récupérer la localisation de la Iss en Latitude et longitude, et a l'aide d'une formule mathématique la convertir en coordonnées cartésiennes.`,
+      `Projet personnel réalisé dans un week-end.`,
+    ],
     characteristics: [
-      `Images d'en-tête modifiables`,
-      `Modification de la localisation de la map de Google`,
-      `Creation des articles qui s'affichent sur la page sous forme d'une grille`,
+      // `Le Manager de l'équipe à la possibilité d'ajouter des matchs et de sélectionner quels joueurs seront convoques a ce match.`,
+      // `Les Joueurs ont access à une liste avec tous les matchs à venir`,
+      // `Autocompletion de pour les noms des villes grâce a une API`,
     ],
   },
   {
@@ -44,6 +48,22 @@ export const PROJECTS: Project[] = [
       `Le Manager de l'équipe à la possibilité d'ajouter des matchs et de sélectionner quels joueurs seront convoques a ce match.`,
       `Les Joueurs ont access à une liste avec tous les matchs à venir`,
       `Autocompletion de pour les noms des villes grâce a une API`,
+    ],
+  },
+  {
+    name: 'Wordpress Theme Enfant',
+    gif: 'teamCherryWP.gif',
+    verticalGif: false,
+    githubRepo: 'https://github.com/PolSust/talon-child',
+    demoLink: 'https://cefii-developpements.fr/pol1149/wpIntegrationProject/',
+    relevantTechnologies: ['php', 'wordpress', 'css', 'woocommerce', 'jquery'],
+    frontEndPercentage: 25,
+    backEndPercentage: 75,
+    description: [`Il s'agit d'un theme enfant de WordPress personnalisable.`],
+    characteristics: [
+      `Images d'en-tête modifiables`,
+      `Modification de la localisation de la map de Google`,
+      `Creation des articles qui s'affichent sur la page sous forme d'une grille`,
     ],
   },
   // {

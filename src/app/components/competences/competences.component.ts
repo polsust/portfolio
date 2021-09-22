@@ -23,6 +23,7 @@ import {
   faNodeJs,
   faWordpress,
   faSass,
+  faReact,
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -65,6 +66,7 @@ export class CompetencesComponent {
   faNodeJs = faNodeJs;
   faWordpress = faWordpress;
   faSass = faSass;
+  faReact = faReact;
 
   canFlip = false;
   backHidden = true;

@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: "#93c5fd",
+          light: "#69aefc",
           lighter: "hsl(212, 96%, 86%)",
         },
         secondary: {
@@ -33,7 +33,7 @@ module.exports = {
       },
       boxShadow: {
         innerXl: `
-           var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
             --tw-shadow: inset 0px 8px 5px rgba(0, 0, 0, 0.06);
             background-color: rgba(0, 0, 0, 0.06)
         `,

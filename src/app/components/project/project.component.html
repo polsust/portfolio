@@ -44,7 +44,7 @@
     [ngClass]="{'lg:justify-start': !reverse, 'lg:justify-end': reverse, 'lg:w-4/12': project.verticalGif, 'lg:w-7/12': !project.verticalGif}"
     class="flex items-start justify-center w-full bg-primary-lighter lg:bg-opacity-0">
 
-    <img class="rounded" [src]="'assets/img/' + project.gif" alt="">
+    <a target="blank" [href]="project.demoLink"><img class="rounded" [src]="'assets/img/' + project.gif" alt=""></a>
 
   </div>
   <div [ngClass]="{'lg:w-8/12': project.verticalGif, 'lg:w-5/12': !project.verticalGif}" class="w-full">
@@ -109,7 +109,7 @@
               fill="currentColor"></path>
           </svg>
         </div>
-        <fa-icon title="Angular" class="angular" *ngSwitchCase="'angular'" [icon]="icons.faAngular"></fa-icon>
+        <fa-icon title="Angular 2" class="angular" *ngSwitchCase="'angular'" [icon]="icons.faAngular"></fa-icon>
         <div title="Ionic" class="ionic" *ngSwitchCase="'ionic'">
           <svg class="ionic" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em"
@@ -155,9 +155,9 @@
     </span>
     <figcaption [@fadeUp]="animate? 'up-visible' : 'down-invisible'" class="w-full p-4 font-semibold">
       <p class="my-1" *ngFor="let desc of project.description">
-        {{desc}}
+        {{ desc }}
       </p>
-      <h5 class="my-3 text-xl">Caractéristiques principales : </h5>
+      <h5 *ngIf="project.characteristics.length != 0" class="my-3 text-xl">Caractéristiques principales : </h5>
       <ul class="ml-8">
         <li *ngFor="let item of project.characteristics" class="my-3 list-disc">
           {{ item }}

@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CompetencesComponent } from './components/competences/competences.component';
 import { ProjectComponent } from './components/project/project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IconsComponent } from './icons/icons.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     CompetencesComponent,
     ProjectComponent,
+    IconsComponent,
   ],
   imports: [BrowserModule, FontAwesomeModule, BrowserAnimationsModule],
   providers: [],
