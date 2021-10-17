@@ -15,11 +15,7 @@ export const PROJECTS: Project[] = [
       `Grâce a une API on peut récupérer la localisation de la Iss en Latitude et longitude, et a l'aide d'une formule mathématique la convertir en coordonnées cartésiennes.`,
       `Projet personnel réalisé dans un week-end.`,
     ],
-    characteristics: [
-      // `Le Manager de l'équipe à la possibilité d'ajouter des matchs et de sélectionner quels joueurs seront convoques a ce match.`,
-      // `Les Joueurs ont access à une liste avec tous les matchs à venir`,
-      // `Autocompletion de pour les noms des villes grâce a une API`,
-    ],
+    characteristics: [],
   },
   {
     name: 'App mobile Basket',
