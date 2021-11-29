@@ -11,9 +11,8 @@ export const PROJECTS: Project[] = [
     frontEndPercentage: 100,
     backEndPercentage: 0,
     description: [
-      `Cette application permet de visualiser où se trouve la Station Spatiale Internationale.`,
+        `Cette application permet de visualiser où se trouve la Station Spatiale Internationale.`,
       `Grâce a une API on peut récupérer la localisation de la Iss en Latitude et longitude, et a l'aide d'une formule mathématique la convertir en coordonnées cartésiennes.`,
-      `Projet personnel réalisé dans un week-end.`,
     ],
     characteristics: [],
   },
