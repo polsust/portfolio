@@ -8,6 +8,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class PresentationComponent {
   @ViewChild('figcaption') private figcaption: ElementRef | undefined;
   public alreadyAnimated = false;
+  public age = new Date().getFullYear() - 2002;
 
   startTimeout: number = 1000;
 
