@@ -18,6 +18,7 @@ import {
   faWordpress,
   faSass,
   faReact,
+  faSymfony,
 } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -114,6 +115,7 @@ export class ProjectComponent {
     faWordpress,
     faSass,
     faReact,
+    faSymfony,
   };
 
   constructor() {}
