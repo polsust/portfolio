@@ -6,7 +6,7 @@ export interface Project {
   frontEndPercentage: number;
   backEndPercentage: number;
   gif: string;
-  githubRepo: string;
+  githubRepo?: string;
   demoLink: string;
   verticalGif: boolean;
 }

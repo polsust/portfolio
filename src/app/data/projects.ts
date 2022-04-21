@@ -2,6 +2,25 @@ import { Project } from './../interfaces/project.interface';
 
 export const PROJECTS: Project[] = [
   {
+    name: 'Application de commande du stock "Web in Store"',
+    gif: 'webInStore.gif',
+    verticalGif: false,
+    demoLink: 'https://youtu.be/jW8r4hXUSHM',
+    relevantTechnologies: ['react', 'php', 'symfony', 'sql'],
+    frontEndPercentage: 60,
+    backEndPercentage: 40,
+    description: [
+      `Cette application a été réalisée dans le cadre d'une entreprise de vêtement et accessoires.`,
+      `Elle permet aux organisateurs de chaque magasin de commander du stock via une interface d'e-commerce.`,
+      `Cette application ne dispose pas d'une démo parce que l'accès est limite qu'aux internes de l'entreprise.`,
+    ],
+    characteristics: [
+      `Dispose un panier pour rendre la commande plus facile`,
+      `Gestion de cache pour rendre l'usage plus fluide`,
+      `Possibilité de filtrer les produits par marque et modèle`,
+    ],
+  },
+  {
     name: 'Traqueur de la Station Spatiale Internationale',
     gif: 'IssTracker.gif',
     verticalGif: false,
@@ -11,7 +30,7 @@ export const PROJECTS: Project[] = [
     frontEndPercentage: 100,
     backEndPercentage: 0,
     description: [
-        `Cette application permet de visualiser où se trouve la Station Spatiale Internationale.`,
+      `Cette application permet de visualiser où se trouve la Station Spatiale Internationale.`,
       `Grâce a une API on peut récupérer la localisation de la Iss en Latitude et longitude, et a l'aide d'une formule mathématique la convertir en coordonnées cartésiennes.`,
     ],
     characteristics: [],
@@ -40,7 +59,7 @@ export const PROJECTS: Project[] = [
       `Mot de passe : 123456`,
     ],
     characteristics: [
-      `Le Manager de l'équipe à la possibilité d'ajouter des matchs et de sélectionner quels joueurs seront convoques a ce match.`,
+      `Le Manager de l'équipe à la possibilité d'ajouter des matchs et de sélectionner quels joueurs seront convoques a ce match`,
       `Les Joueurs ont access à une liste avec tous les matchs à venir`,
       `Autocompletion de pour les noms des villes grâce a une API`,
     ],
@@ -61,16 +80,4 @@ export const PROJECTS: Project[] = [
       `Creation des articles qui s'affichent sur la page sous forme d'une grille`,
     ],
   },
-  // {
-  //   name: 'Cinema',
-  //   gif: 'basket.gif',
-  //   verticalGif: true,
-  //   githubRepo: 'https://github.com/PolSust/cinemaWebsite',
-  //   demoLink: 'https://cefii-developpements.fr/pol1149/wpIntegrationProject/',
-  //   relevantTechnologies: ['php', 'bootstrap'],
-  //   frontEndPercentage: 12,
-  //   backEndPercentage: 88,
-  //   description: ['Ce site web permet de reserver des séances dans un cinema '],
-  //   characteristics: [`-Possibilité de modifier les images 'header' `],
-  // },
 ];
